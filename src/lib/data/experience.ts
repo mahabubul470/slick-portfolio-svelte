@@ -1,8 +1,8 @@
-import Assets from './data/assets';
-import { getSkills } from './skills.params';
-import { ContractType, type Experience } from './types';
+import Assets from './assets';
+import { getSkills } from './skills';
+import { ContractType, type Experience } from '../types';
 
-const MY_EXPERIENCES: Array<Experience> = [
+export const items: Array<Experience> = [
 	{
 		slug: 'open-sourcer',
 		company: 'Self-employed',
@@ -13,10 +13,10 @@ const MY_EXPERIENCES: Array<Experience> = [
 		period: { from: new Date() },
 		skills: getSkills('ts', 'js'),
 		name: 'Open Source Developer',
-		color: '#ffffff',
+		color: 'red',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: ''
+		shortDescription: 'Creating awesome tools for developers.'
 	},
 	{
 		slug: 'software-freelance',
@@ -28,10 +28,10 @@ const MY_EXPERIENCES: Array<Experience> = [
 		period: { from: new Date() },
 		skills: getSkills('svelte', 'ts', 'sass', 'css', 'html', 'js'),
 		name: 'Freelancer',
-		color: '#ffffff',
+		color: 'blue',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: ''
+		shortDescription: 'Creating awesome applications for customers.'
 	},
 	{
 		slug: 'software-freelance-junior',
@@ -43,11 +43,11 @@ const MY_EXPERIENCES: Array<Experience> = [
 		period: { from: new Date(2022, 0, 1), to: new Date() },
 		skills: getSkills('css', 'html', 'js'),
 		name: 'Junior Freelancer',
-		color: '#ffffff',
+		color: 'green',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: ''
+		shortDescription: 'Creating awesome applications for customers.'
 	}
 ];
 
-export default MY_EXPERIENCES;
+export const title = 'Experience';
